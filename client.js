@@ -5,14 +5,22 @@ function onReady() {
     console.log("Here's to the freakin weekend");
 }
 //create listener for click
-$('#mainSubmit').on('click', addEmployee);
+$('#submit').on('click', addEmployee);
 
 //## Assignment
-const employeeList =[];
+//created global array with nested object
+const employees = [
+  {
+    firstName: '',
+    lastName: '',
+    idNumber: '',
+    jobTitle: '',
+    annualSalary: ''
+  }
+];
 
 //making function to push inputs into employeeList array
 function newEmployee(InputFirst, InputLast, InputIdNumber, InputJobTitle,InputAnnualSalary){
-    console.log('in newEmployee:', fNameInput, InputLast, InputIdNumber, jobTitleInput,InputAnnualSalary);
     const employeeInputObject = {
       first: InputFirst,
       last: InputLast,
@@ -20,7 +28,7 @@ function newEmployee(InputFirst, InputLast, InputIdNumber, InputJobTitle,InputAn
       title: InputJobTitle,
       salary:InputAnnualSalary,
     }
-    employeeList.push(employeeInputObject);
+    employee.push(employeeInputObject);
     return true;
   } // end newEmployee
 
@@ -36,7 +44,7 @@ function addEmployee() {
 //grabbing values from inputs
 newEmployee(fName.val(), lName.val(), idNumber.val(),jobTitle.val(), annualSalary.val());
 }
-console.log(employeeList);
+console.log(employees);
 //display employeeList array and inputs into the DOM..
    
 

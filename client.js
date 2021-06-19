@@ -8,20 +8,37 @@ function onReady() {
 $('#mainSubmit').on('click', addEmployee);
 
 //## Assignment
-let employeeList =[];
+const employeeList =[];
+
+//making function to push inputs into employeeList array
+function newEmployee(fNameInput, lNameInput, idNumberInput, jobTitleInput,annualSalaryInput){
+    console.log('in newEmployee:', fNameInput, lNameInput, idNumberInput, jobTitleInput,annualSalaryInput);
+    const employeeInputObject = {
+      first: fNameInput,
+      last: lNameInput,
+      id: idNumberInput,
+      title: jobTitleInput,
+      salary:annualSalaryInput,
+    }
+    employeeList.push(employeeInputObject);
+    return true;
+  } // end newEmployee
+
 // The application should have an input form that collects _employee first name, last name, ID number, job title, annual salary_.
 function addEmployee() {
     //grab employee details from the input fields..
-    let fName= $('#inputFirstName');
-    let lName= $('#inputLastName');
-    let idNumber= $('#inputIDNumber');
-    let jobTitle= $('#inputJobTitle');
-    let annualSalary= $('#inputAnnualSalary');
+    let fName= $('#InputFirst');
+    let lName= $('#InputLast');
+    let idNumber= $('#InputIdNumber');
+    let jobTitle= $('#InputJobTitle');
+    let annualSalary= $('#InputAnnualSalary');
 
-    employeeList.push(addEmployee);
-    return true;
-};
-console.log(employeeList);
+//grabbing values from inputs
+newEmployee(fName.val(), lName.val(), idNumber.val(),jobTitle.val(), annualSalary.val());
+employeeList();
+}
+//display employeeList array and inputs into the DOM..
+   
 
 
 // A 'Submit' button should collect the form information, 

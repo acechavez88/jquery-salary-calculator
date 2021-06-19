@@ -5,7 +5,7 @@ function onReady() {
     console.log("Here's to the freakin weekend");
 }
 //create listener for click
-$('$(mainSubmit').on('click', addEmployee)
+$('$(mainSubmit').on('click', addEmployee);
 
 //## Assignment
 

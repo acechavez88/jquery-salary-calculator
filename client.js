@@ -30,10 +30,9 @@ function newEmployee(InputFirst, InputLast, InputIdNumber, InputJobTitle,InputAn
 //grabbing values from inputs
 newEmployee(fName.val(), lName.val(), idNumber.val(),jobTitle.val(), annualSalary.val());
 employee.push(newEmployee);
-    return true;
-}
+
+} // end newEmployee
 console.log(employees);
-// end newEmployee
 
 // The application should have an input form that collects _employee first name, last name, ID number, job title, annual salary_.
 

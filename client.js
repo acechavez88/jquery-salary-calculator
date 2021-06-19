@@ -5,12 +5,20 @@ function onReady() {
     console.log("Here's to the freakin weekend");
 }
 //create listener for click
-$('$(mainSubmit').on('click', addEmployee);
+$('#mainSubmit').on('click', addEmployee);
 
 //## Assignment
 
 // The application should have an input form that collects _employee first name, last name, ID number, job title, annual salary_.
-
+function addEmployee() {
+    //grab employee details from the input fields..
+    // let fName= $('inputFirstName');
+    // let lName= $('inputLastName');
+    // let idNumber= $('inputIDNumber');
+    // let jobTitle= $('inputJobTitle');
+    // let annualSalary= $('inputAnnualSalary');
+}
+console.log('I clicked the submit button',);
 
 
 // A 'Submit' button should collect the form information, 

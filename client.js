@@ -11,14 +11,14 @@ $('#mainSubmit').on('click', addEmployee);
 const employeeList =[];
 
 //making function to push inputs into employeeList array
-function newEmployee(fNameInput, lNameInput, idNumberInput, jobTitleInput,annualSalaryInput){
-    console.log('in newEmployee:', fNameInput, lNameInput, idNumberInput, jobTitleInput,annualSalaryInput);
+function newEmployee(InputFirst, InputLast, InputIdNumber, InputJobTitle,InputAnnualSalary){
+    console.log('in newEmployee:', fNameInput, InputLast, InputIdNumber, jobTitleInput,InputAnnualSalary);
     const employeeInputObject = {
-      first: fNameInput,
-      last: lNameInput,
-      id: idNumberInput,
-      title: jobTitleInput,
-      salary:annualSalaryInput,
+      first: InputFirst,
+      last: InputLast,
+      id: InputIdNumber,
+      title: InputJobTitle,
+      salary:InputAnnualSalary,
     }
     employeeList.push(employeeInputObject);
     return true;
@@ -35,8 +35,8 @@ function addEmployee() {
 
 //grabbing values from inputs
 newEmployee(fName.val(), lName.val(), idNumber.val(),jobTitle.val(), annualSalary.val());
-employeeList();
 }
+console.log(employeeList);
 //display employeeList array and inputs into the DOM..
    
 

@@ -23,10 +23,16 @@ function newEmployee(){
 
 //grabbing values from inputs
 addEmployee(fName.val(), lName.val(), idNumber.val(),jobTitle.val(), annualSalary.val());
+//pushing inputs to global array to update employee list
 employees.push();
+//clear the input fields. 
+$('#InputFirst').val('')
+$('#InputLast').val('')
+$('#InputIdNumber').val('')
+$('#InputJobTitle').val('')
+$('#InputAnnualSalary').val('')
 
 } // end newEmployee
-console.log(employees);
 
 // The application should have an input form that collects _employee first name, last name, ID number, job title, annual salary_.
 
@@ -41,10 +47,23 @@ function addEmployee(firstName, lastName, idNumber, jobTitle, annualSalary){
     annualSalary: annualSalary
   }
   employees.push(inputInfoObject);
+  console.log(employees);
   return true;
-}//end newCar
+}//end addEmployee
 
 //display employeeList array and inputs into the DOM..
+function createTable() {
+  $('panel').append(`
+    <tbody>
+      <h3>Count</h3>
+      <td class="tableFirstName">First Name</td>
+                <td class="tableLastName">Last Name</td>
+                <td class="tableIdNumber">ID Number</td>
+                <td class="tableJobTitle">job title</td>
+                <td class="tableAnnualSalary">annual salary</td>
+    </tbody>
+  `);
+}
    
 
 
@@ -56,9 +75,7 @@ function addEmployee(firstName, lastName, idNumber, jobTitle, annualSalary){
 
 
 
-//append information to the DOM and clear the input fields. 
-
-
+//append information to the DOM
 
 
 //Using the stored information, calculate monthly costs and append this to the to DOM. 

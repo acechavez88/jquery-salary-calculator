@@ -6,43 +6,92 @@ header{
     margin: 50px;
     padding: 100px;
     background-color: grey;
+    box-shadow: 1px 1px 12px rgb(53, 49, 49);
 }
 
 h1{
     color: white;
     text-align: center;
     font-size: 80px;
+    font-family: arial,helvetica,sans-serif;
 }
 
 .addEmployeeLine{
     margin: 50px;
     color: black;
     font-size: 20px;
+    text-align: left;
     
 }
 
 .InputFirst{
-    border: 20vh 20vh black;
-    background-color: black;
-    color: aqua;
+    white-space: nowrap;
+    font-family: arial,helvetica,sans-serif;
+    padding: 5px;
+    color: #000;
+    background: #fff;
+    padding-left: 11px;
+    text-align: right;
+    width: 120px;
+    border: 1px solid #044284;
+    border-radius: 2px;
+    box-shadow: 1px 1px 2px #666;
+    font-size: 16px;
 }
 .InputLast{
-    border: 20vh 20vh black;
-    background-color: black;
-    color: aqua;
+    white-space: nowrap;
+    font-family: arial,helvetica,sans-serif;
+    padding: 5px;
+    color: #000;
+    background: #fff;
+    padding-left: 11px;
+    text-align: right;
+    width: 120px;
+    border: 1px solid #044284;
+    border-radius: 2px;
+    box-shadow: 1px 1px 2px #666;
+    font-size: 16px;
 }
 .InputIdNumber{
-    border: 20vh 20vh black;
-    background-color: black;
-    color: aqua;
+    white-space: nowrap;
+    font-family: arial,helvetica,sans-serif;
+    padding: 5px;
+    color: #000;
+    background: #fff;
+    padding-left: 11px;
+    text-align: right;
+    width: 120px;
+    border: 1px solid #044284;
+    border-radius: 2px;
+    box-shadow: 1px 1px 2px #666;
+    font-size: 16px;
 }
 .InputJobTitle{
-    border: 20vh 20vh black;
-    background-color: black;
-    color: aqua;
+    white-space: nowrap;
+    font-family: arial,helvetica,sans-serif;
+    padding: 5px;
+    color: #000;
+    background: #fff;
+    padding-left: 11px;
+    text-align: right;
+    width: 120px;
+    border: 1px solid #044284;
+    border-radius: 2px;
+    box-shadow: 1px 1px 2px #666;
+    font-size: 16px;
 }
 .InputAnnualSalary{
-    border: 20vh 20vh black;
-    background-color: black;
-    color: aqua;
+    white-space: nowrap;
+    font-family: arial,helvetica,sans-serif;
+    padding: 5px;
+    color: #000;
+    background: #fff;
+    padding-left: 11px;
+    text-align: right;
+    width: 120px;
+    border: 1px solid #044284;
+    border-radius: 2px;
+    box-shadow: 1px 1px 2px #666;
+    font-size: 16px;
 }
+

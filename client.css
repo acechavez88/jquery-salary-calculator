@@ -20,3 +20,29 @@ h1{
     font-size: 20px;
     
 }
+
+.InputFirst{
+    border: 20vh 20vh black;
+    background-color: black;
+    color: aqua;
+}
+.InputLast{
+    border: 20vh 20vh black;
+    background-color: black;
+    color: aqua;
+}
+.InputIdNumber{
+    border: 20vh 20vh black;
+    background-color: black;
+    color: aqua;
+}
+.InputJobTitle{
+    border: 20vh 20vh black;
+    background-color: black;
+    color: aqua;
+}
+.InputAnnualSalary{
+    border: 20vh 20vh black;
+    background-color: black;
+    color: aqua;
+}

@@ -3,9 +3,11 @@ $(document).ready(onReady); // linking JQuery
 // console log to test connection with HTML..
 function onReady() {
     console.log("Here's to the freakin weekend");
+    //create listener for click
+    $('#Submit').on('click', newEmployee);
 }
-//create listener for click
-$('#Submit').on('click', newEmployee);
+
+
 
 //## Assignment
 //created global array with nested object
@@ -20,7 +22,7 @@ const employees = [
 ];
 
 //making function to push inputs into employeeList array
-function newEmployee(InputFirst, InputLast, InputIdNumber, InputJobTitle,InputAnnualSalary){
+function newEmployee(){
   let fName= $('#InputFirst');
   let lName= $('#InputLast');
   let idNumber= $('#InputIdNumber');
@@ -29,7 +31,7 @@ function newEmployee(InputFirst, InputLast, InputIdNumber, InputJobTitle,InputAn
 
 //grabbing values from inputs
 newEmployee(fName.val(), lName.val(), idNumber.val(),jobTitle.val(), annualSalary.val());
-employee.push(newEmployee);
+employees.push(newEmployee);
 
 } // end newEmployee
 console.log(employees);

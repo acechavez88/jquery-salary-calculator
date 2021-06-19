@@ -8,17 +8,20 @@ function onReady() {
 $('#mainSubmit').on('click', addEmployee);
 
 //## Assignment
-
+let employeeList =[];
 // The application should have an input form that collects _employee first name, last name, ID number, job title, annual salary_.
 function addEmployee() {
     //grab employee details from the input fields..
-    // let fName= $('inputFirstName');
-    // let lName= $('inputLastName');
-    // let idNumber= $('inputIDNumber');
-    // let jobTitle= $('inputJobTitle');
-    // let annualSalary= $('inputAnnualSalary');
-}
-console.log('I clicked the submit button',);
+    let fName= $('#inputFirstName');
+    let lName= $('#inputLastName');
+    let idNumber= $('#inputIDNumber');
+    let jobTitle= $('#inputJobTitle');
+    let annualSalary= $('#inputAnnualSalary');
+
+    employeeList.push(addEmployee);
+    return true;
+};
+console.log(employeeList);
 
 
 // A 'Submit' button should collect the form information, 

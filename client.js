@@ -5,7 +5,7 @@ function onReady() {
     console.log("Here's to the freakin weekend");
 }
 //create listener for click
-$('#submit').on('click', addEmployee);
+$('#Submit').on('click', newEmployee);
 
 //## Assignment
 //created global array with nested object
@@ -21,30 +21,23 @@ const employees = [
 
 //making function to push inputs into employeeList array
 function newEmployee(InputFirst, InputLast, InputIdNumber, InputJobTitle,InputAnnualSalary){
-    const employeeInputObject = {
-      first: InputFirst,
-      last: InputLast,
-      id: InputIdNumber,
-      title: InputJobTitle,
-      salary:InputAnnualSalary,
-    }
-    employee.push(employeeInputObject);
-    return true;
-  } // end newEmployee
-
-// The application should have an input form that collects _employee first name, last name, ID number, job title, annual salary_.
-function addEmployee() {
-    //grab employee details from the input fields..
-    let fName= $('#InputFirst');
-    let lName= $('#InputLast');
-    let idNumber= $('#InputIdNumber');
-    let jobTitle= $('#InputJobTitle');
-    let annualSalary= $('#InputAnnualSalary');
+  let fName= $('#InputFirst');
+  let lName= $('#InputLast');
+  let idNumber= $('#InputIdNumber');
+  let jobTitle= $('#InputJobTitle');
+  let annualSalary= $('#InputAnnualSalary');
 
 //grabbing values from inputs
 newEmployee(fName.val(), lName.val(), idNumber.val(),jobTitle.val(), annualSalary.val());
+employee.push(newEmployee);
+    return true;
 }
 console.log(employees);
+// end newEmployee
+
+// The application should have an input form that collects _employee first name, last name, ID number, job title, annual salary_.
+
+    //grab employee details from the input fields..
 //display employeeList array and inputs into the DOM..
    
 

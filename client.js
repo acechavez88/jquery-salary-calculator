@@ -11,15 +11,7 @@ function onReady() {
 
 //## Assignment
 //created global array with nested object
-const employees = [
-  {
-    firstName: '',
-    lastName: '',
-    idNumber: '',
-    jobTitle: '',
-    annualSalary: ''
-  }
-];
+const employees = [];
 
 //making function to push inputs into employeeList array
 function newEmployee(){
@@ -30,15 +22,28 @@ function newEmployee(){
   let annualSalary= $('#InputAnnualSalary');
 
 //grabbing values from inputs
-newEmployee(fName.val(), lName.val(), idNumber.val(),jobTitle.val(), annualSalary.val());
-employees.push(newEmployee);
+addEmployee(fName.val(), lName.val(), idNumber.val(),jobTitle.val(), annualSalary.val());
+employees.push();
 
 } // end newEmployee
 console.log(employees);
 
 // The application should have an input form that collects _employee first name, last name, ID number, job title, annual salary_.
 
-    //grab employee details from the input fields..
+//grab employee details from the input fields..
+function addEmployee(firstName, lastName, idNumber, jobTitle, annualSalary){
+  console.log('in add employee:', firstName, lastName, idNumber, jobTitle, annualSalary);
+  const inputInfoObject = {
+    firstName: firstName,
+    lastName: lastName,
+    idNumber: idNumber,
+    jobTitle: jobTitle,
+    annualSalary: annualSalary
+  }
+  employees.push(inputInfoObject);
+  return true;
+}//end newCar
+
 //display employeeList array and inputs into the DOM..
    
 
@@ -52,6 +57,7 @@ console.log(employees);
 
 
 //append information to the DOM and clear the input fields. 
+
 
 
 

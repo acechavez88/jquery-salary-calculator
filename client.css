@@ -101,6 +101,16 @@ h1{
 .mainElement{
     background-color: antiquewhite;
     border-radius: 1%;
-    border: 11px #044284;
+    border: 11px #07305b;
     box-shadow:  1px 1px 2px #666;;
+}
+.h3AddEmployee{
+    background: #154f72;
+    color: #fff;
+    border: 1px solid #74717b;
+    padding: 1px;
+    margin-top: 1px;
+    margin-bottom: auto;
+    font-size: 22px;
+    font-weight: normal;
 }

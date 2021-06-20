@@ -5,6 +5,8 @@ function onReady() {
     console.log("Here's to the freakin weekend");
     //create listener for click
     $('#Submit').on('click', newEmployee);
+    //create handle to make table row with employee info into DOM..
+    createTable();
 }
 
 

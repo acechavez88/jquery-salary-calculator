@@ -53,16 +53,22 @@ function addEmployee(firstName, lastName, idNumber, jobTitle, annualSalary){
 
 //display employeeList array and inputs into the DOM..
 function createTable() {
-  $('panel').append(`
-    <tbody>
-      <h3>Count</h3>
-      <td class="tableFirstName">First Name</td>
+  $('table').append(`
+  </table>
+    <article>
+        <button id="Submit">Submit</button>
+        <button id="Delete">Delete Employee</button>
+    </article>
+        <table style="width:100%" id= "panel" class= "panel" cellpadding= "30">
+            <tbody>
+                <td class="tableFirstName">First Name</td>
                 <td class="tableLastName">Last Name</td>
                 <td class="tableIdNumber">ID Number</td>
                 <td class="tableJobTitle">job title</td>
                 <td class="tableAnnualSalary">annual salary</td>
-    </tbody>
-  `);
+            </tbody>
+        </table>
+        `);
 }
    
 

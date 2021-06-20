@@ -82,9 +82,8 @@ function createTable() {
 //Using the stored information, calculate monthly costs and append this to the to DOM. 
 function calculateSalary(employee) {
   let monthlySalary = parseInt(employees.annualSalary/12) ;
-  if (employees.annualSalary > 0 ) {
-  }
-  return (monthlySalary)
+  
+  return (monthlySalary);
 }
 
 //add a red background color to the total monthly cost If the total monthly cost exceeds $20,000, 

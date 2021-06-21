@@ -25,6 +25,8 @@ let newEmployee= {
    jobTitle: $('#InputJobTitle').val(),
    annualSalary: $('#InputAnnualSalary').val()
 }
+
+
 //pushing inputs to global array to update employee list
 employees.push(newEmployee);
 
@@ -41,17 +43,24 @@ console.log(employees);
 
 //display employeeList array and inputs into the DOM for new table row..
 function createTable() {
-  $('panel').append(`
-    <tr id= "panel">
-      <td class="tableFirstName">First Name</td>
-      <td class="tableLastName">Last Name</td>
-      <td class="tableIdNumber">ID Number</td>
-      <td class="tableJobTitle">job title</td>
-      <td class="tableAnnualSalary">annual salary</td>
+  for (const employee of employees) {
+    const salary = Number (employee.annualSalary).toLocateString('en-US',{style: 'currency', currency: 'USD'});
+    console.log('salary:', salary);
+    
+    $('#panel').append(`
+    <tr>
+      <td>${tableFirstName}</td>
+      <td>${tableLastName}</td>
+      <td>${tableIdNumber}</td>
+      <td>${tableJobTitle}</td>
+      <td>${tableAnnualSalary}</td>
      </tr>
         `);
 }
 
+}
+  
+ 
    
 
 

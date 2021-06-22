@@ -5,8 +5,7 @@ function onReady() {
     console.log("Here's to the freakin weekend");
     //create listener for click
     $('#Submit').on('click', submitEmployee);
-    //create handle to make table row with employee info into DOM..
-    $("#panel").append(createTable);
+    
 }
 
 
@@ -25,6 +24,8 @@ let newEmployee= {
    jobTitle: $('#InputJobTitle').val(),
    annualSalary: $('#InputAnnualSalary').val()
 }
+//create handle to make table row with employee info into DOM..
+$("#panel").append(createTable);
 
 
 //pushing inputs to global array to update employee list
@@ -104,10 +105,12 @@ function populateTable() {
 
 
 //Using the stored information, calculate monthly costs and append this to the to DOM. 
-function calculateSalary(employee) {
-  let monthlySalary = parseInt(employees.annualSalary/12) ;
-  
-  return (monthlySalary);
+function getMonthlyTotal() {
+  let total = 0;
+  for (const emp of employees) {
+    total += Number(emp.annualSalary);
+  }
+  return total / 12;
 }
 
 //add a red background color to the total monthly cost If the total monthly cost exceeds $20,000, 

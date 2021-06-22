@@ -6,7 +6,7 @@ function onReady() {
     //create listener for click
     $('#Submit').on('click', submitEmployee);
     //create handle to make table row with employee info into DOM..
-    createTable('panel');
+    $("#panel").append(createTable);
 }
 
 
@@ -58,6 +58,34 @@ function createTable() {
         `);
 }
 
+}
+
+// Function for creating the HTML for an employee in the table.
+function employeeRow(Employee) {
+  const salary = Number(Employee.annualSalary).toLocaleString('en-US', {
+    style: 'currency',
+    currency: 'USD',
+  });
+  console.log(salary);
+  return `
+    <tr>
+        <td scope="row">${Employee.tableFirstName}</td>
+        <td>${Employee.tableLastName}</td>
+        <td>${Employee.tableIdNumber}</td>
+        <td>${Employee.tableJobTitle}</td>
+        <td>${tableAnnualSalary}</td>
+        <td><button data-id="${
+          Employee.employeeId
+        }" class="btn btn-danger btn-sm">Delete</button>
+      </tr>
+  `;
+}
+
+// Iterate through the employee[] and populate the table
+function populateTable() {
+  for (const employee of employees) {
+    $('#employeeList').append(employeeRow(employee));
+  }
 }
   
  

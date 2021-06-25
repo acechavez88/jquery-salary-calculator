@@ -25,7 +25,7 @@ let newEmployee= {
    annualSalary: $('#InputAnnualSalary').val()
 }
 //create handle to make table row with employee info into DOM..
-$("#panel").append(createTable);
+// $("#panel").append(createTable);
 
 
 //pushing inputs to global array to update employee list
@@ -38,23 +38,25 @@ $('#InputIdNumber').val('')
 $('#InputJobTitle').val('')
 $('#InputAnnualSalary').val('')
 
-console.log(employees);
+
+createTable(); // calling function
 
 } // end submitEmployee
 
 //display employeeList array and inputs into the DOM for new table row..
 function createTable() {
+  console.log(employees);
   for (const employee of employees) {
-    const salary = Number (employee.annualSalary).toLocateString('en-US',{style: 'currency', currency: 'USD'});
+    const salary = Number (employee.annualSalary).toLocaleString('en-US',{style: 'currency', currency: 'USD'});
     console.log('salary:', salary);
     
-    $('#panel').append(`
+    $('.panel').append(`
     <tr>
-      <td>${tableFirstName}</td>
-      <td>${tableLastName}</td>
-      <td>${tableIdNumber}</td>
-      <td>${tableJobTitle}</td>
-      <td>${tableAnnualSalary}</td>
+      <td>${employee.fName}</td>
+      <td>${employee.lName}</td>
+      <td>${employee.idNumber}</td>
+      <td>${employee.jobTitle}</td>
+      <td>${salary}</td>
      </tr>
         `);
 }
@@ -83,11 +85,11 @@ function employeeRow(Employee) {
 }
 
 // Iterate through the employee[] and populate the table
-function populateTable() {
-  for (const employee of employees) {
-    $('#employeeList').append(employeeRow(employee));
-  }
-}
+// function populateTable() {
+//   for (const employee of employees) {
+//     $('#employeeList').append(employeeRow(employee));
+//   }
+// }
   
  
    
@@ -105,13 +107,7 @@ function populateTable() {
 
 
 //Using the stored information, calculate monthly costs and append this to the to DOM. 
-function getMonthlyTotal() {
-  let total = 0;
-  for (const emp of employees) {
-    total += Number(emp.annualSalary);
-  }
-  return total / 12;
-}
+
 
 //add a red background color to the total monthly cost If the total monthly cost exceeds $20,000, 
 
